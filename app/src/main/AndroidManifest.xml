@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TaskUser"
+        android:theme="@style/Theme.TaskUser.NoActionBar"
         android:name=".TaskUserApplication">
 
         <activity android:name=".activities.MainActivity">
