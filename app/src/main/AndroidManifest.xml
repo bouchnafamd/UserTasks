@@ -14,7 +14,7 @@
         android:theme="@style/Theme.TaskUser.NoActionBar"
         android:name=".TaskUserApplication">
 
-        <activity android:name=".activities.MainActivity">
+        <activity android:name="com.example.taskuser.ui.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

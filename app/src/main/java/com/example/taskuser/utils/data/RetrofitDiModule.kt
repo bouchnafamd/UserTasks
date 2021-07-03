@@ -1,4 +1,4 @@
-package com.example.taskuser.utils
+package com.example.taskuser.utils.data
 
 import dagger.Module
 import dagger.Provides
@@ -15,7 +15,7 @@ object RetrofitDiModule {
     @Provides
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.github.com/")
+            .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

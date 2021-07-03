@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/userListFragment"
-        android:name="com.example.taskuser.fragments.UserListFragment"
+        android:name="com.example.taskuser.ui.fragments.UserListFragment"
         android:label="UserListFragment" />
 </navigation>

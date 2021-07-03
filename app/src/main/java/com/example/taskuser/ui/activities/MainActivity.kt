@@ -1,8 +1,6 @@
-package com.example.taskuser.activities
+package com.example.taskuser.ui.activities
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.taskuser.R
 import com.example.taskuser.databinding.MainActivityBinding
 import dagger.hilt.android.AndroidEntryPoint
 
