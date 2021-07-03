@@ -10,11 +10,13 @@ import javax.inject.Inject
 class ItemUserListAdapter @Inject constructor() : RecyclerView.Adapter<ItemUserListAdapter.ItemUserViewHolder>() {
 
     private var listUser = ArrayList<UserModel>()
+    var itemClickListener : ((userModel : UserModel)->Unit)?=null
 
     class ItemUserViewHolder(val binding : ItemUserBinding) : RecyclerView.ViewHolder(binding.root){
         val userNameText = binding.userNameText
         val userUserNameText = binding.userUserNameText
         val emailText = binding.emailText
+        val cardViewItem = binding.cardViewItem
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemUserViewHolder {
@@ -28,6 +30,9 @@ class ItemUserListAdapter @Inject constructor() : RecyclerView.Adapter<ItemUserL
             userNameText.text=user.name
             userUserNameText.text=user.userName
             emailText.text=user.mail
+            cardViewItem.setOnClickListener {
+                itemClickListener?.invoke(user)
+            }
         }
     }
 

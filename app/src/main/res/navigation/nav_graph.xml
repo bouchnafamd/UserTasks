@@ -7,5 +7,20 @@
     <fragment
         android:id="@+id/userListFragment"
         android:name="com.example.taskuser.ui.fragments.UserListFragment"
-        android:label="UserListFragment" />
+        android:label="UserListFragment" >
+        <action
+            android:id="@+id/action_userListFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.taskuser.ui.fragments.TaskListFragment"
+        android:label="TaskListFragment" >
+        <argument
+            android:name="userId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
 </navigation>

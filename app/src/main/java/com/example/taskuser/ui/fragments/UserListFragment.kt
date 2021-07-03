@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.taskuser.ui.adapters.ItemUserListAdapter
+import androidx.navigation.fragment.findNavController
 import com.example.taskuser.databinding.FragmentUserListBinding
-import com.example.taskuser.utils.extensions.setVisibility
+import com.example.taskuser.ui.adapters.ItemUserListAdapter
 import com.example.taskuser.ui.viewmodels.UserListViewModel
 import com.example.taskuser.utils.NO_ERROR
+import com.example.taskuser.utils.extensions.setVisibility
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -33,6 +34,7 @@ class UserListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         observeViewModel()
         binding?.userListRecyclerView?.adapter=itemUserListAdapter
+        initListeners()
     }
 
     override fun onResume() {
@@ -61,5 +63,12 @@ class UserListFragment : Fragment() {
 
         }
 
+    }
+
+    private fun initListeners(){
+        itemUserListAdapter.itemClickListener={
+            findNavController().navigate(
+                UserListFragmentDirections.actionUserListFragmentToTaskListFragment(it.userId))
+        }
     }
 }

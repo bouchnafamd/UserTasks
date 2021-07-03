@@ -13,4 +13,8 @@ object DaoDiModule {
     @Provides
     @Singleton
     fun provideUserDao(appDatabase: AppDatabase) = appDatabase.userDao()
+
+    @Provides
+    @Singleton
+    fun provideTaskDao(appDatabase: AppDatabase) = appDatabase.taskDao()
 }

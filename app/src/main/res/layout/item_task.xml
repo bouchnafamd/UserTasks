@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:cardCornerRadius="10dp"
-        android:id="@+id/cardViewItem">
+        app:cardCornerRadius="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -24,59 +23,42 @@
             <androidx.appcompat.widget.AppCompatTextView
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/userNameLabelText"
+                android:id="@+id/taskTitleLabelText"
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@string/user_name_label"/>
+                android:text="@string/task_title_label"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                app:layout_constraintStart_toEndOf="@+id/userNameLabelText"
+                app:layout_constraintStart_toEndOf="@+id/taskTitleLabelText"
                 app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/userNameText"
+                android:id="@+id/taskTitleText"
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mohamed"/>
+                android:text="quis ut nam facilis et officia qui"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userNameLabelText"
-                android:id="@+id/userUserNameLabelText"
+                app:layout_constraintTop_toBottomOf="@+id/taskTitleText"
+                android:id="@+id/taskCompletedLabelText"
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@string/user_username_label"/>
+                android:text="@string/task_completed_label"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                app:layout_constraintStart_toEndOf="@+id/userUserNameLabelText"
-                app:layout_constraintTop_toBottomOf="@+id/userNameLabelText"
-                android:id="@+id/userUserNameText"
-                android:textSize="16sp"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/taskCompletedImageView"
+                app:layout_constraintStart_toEndOf="@+id/taskCompletedLabelText"
+                app:layout_constraintTop_toTopOf="@+id/taskCompletedLabelText"
+                app:layout_constraintBottom_toBottomOf="@+id/taskCompletedLabelText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bret"/>
+                android:src="@android:drawable/checkbox_off_background"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userUserNameLabelText"
-                android:id="@+id/emailLabelText"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/user_email_label"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                app:layout_constraintStart_toEndOf="@+id/emailLabelText"
-                app:layout_constraintTop_toBottomOf="@+id/userUserNameLabelText"
-                android:id="@+id/emailText"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test@gmail.com"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

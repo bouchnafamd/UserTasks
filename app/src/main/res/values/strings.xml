@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">TaskUser</string>
+    <string name="user_list_title">Liste des utilisateurs</string>
+    <string name="user_task_list_title">Liste des taches</string>
     <string name="user_name_label">Nom : </string>
     <string name="user_username_label">UserName : </string>
     <string name="user_email_label">Email : </string>
+    <string name="task_title_label">Titre : </string>
+    <string name="task_completed_label">Completé : </string>
     <string name="user_list_empty_message">La liste des utilisateurs est vide</string>
+    <string name="user_list_task_empty_message">La liste des taches de l\'utilisateur est vide</string>
     <string name="general_error_message">Erreur de communication , Veuillez ressayer</string>
 </resources>
