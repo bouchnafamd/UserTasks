@@ -1,4 +1,4 @@
-package com.example.taskuser.jsonmodels
+package com.example.taskuser.apiservices.jsonmodels
 
 import com.google.gson.annotations.SerializedName
 

@@ -13,6 +13,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object RetrofitDiModule {
     @Provides
+    @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com/")

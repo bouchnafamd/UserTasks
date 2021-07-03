@@ -3,4 +3,6 @@
     <string name="user_name_label">Nom : </string>
     <string name="user_username_label">UserName : </string>
     <string name="user_email_label">Email : </string>
+    <string name="user_list_empty_message">La liste des utilisateurs est vide</string>
+    <string name="general_error_message">Erreur de communication , Veuillez ressayer</string>
 </resources>

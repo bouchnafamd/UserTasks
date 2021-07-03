@@ -10,6 +10,7 @@ import com.example.taskuser.ui.adapters.ItemUserListAdapter
 import com.example.taskuser.databinding.FragmentUserListBinding
 import com.example.taskuser.utils.extensions.setVisibility
 import com.example.taskuser.ui.viewmodels.UserListViewModel
+import com.example.taskuser.utils.NO_ERROR
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -51,6 +52,13 @@ class UserListFragment : Fragment() {
 
         viewModel.listUser.observe(viewLifecycleOwner){
             itemUserListAdapter.update(it)
+        }
+
+        viewModel.errorMsg.observe(viewLifecycleOwner){
+            binding?.userListRecyclerView?.setVisibility(it==NO_ERROR)
+            binding?.userListMessageText?.setVisibility(it!= NO_ERROR)
+            if(it!= NO_ERROR) binding?.userListMessageText?.setText(it)
+
         }
 
     }
